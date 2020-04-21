@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:qrcode_alpha/views/homePage.dart';
 import 'views/qrHome.dart';
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'QR Code Alpha',
       theme: ThemeData(
-        primaryColor: Colors.lightBlue[800],
+        primaryColor: Colors.lightGreen[800],
       ),
-      home: QRHome(),
+      home: homePage(),
       debugShowCheckedModeBanner: false,
     );
   }

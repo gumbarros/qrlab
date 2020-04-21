@@ -36,7 +36,7 @@ class _QRHomeState extends State<QRHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Escanear QR Code"),
+        title: Text("QR Code scan"),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         actions: <Widget>[
