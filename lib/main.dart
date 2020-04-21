@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'views/home.dart';
+import 'views/qrHome.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.lightBlue[800],
       ),
-      home: Home(),
+      home: QRHome(),
       debugShowCheckedModeBanner: false,
     );
   }
