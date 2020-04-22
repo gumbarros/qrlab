@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:qrlab/views/qrHome.dart';
 import 'qrLoginHelper.dart';
-import 'qrScanner.dart';
 
 class QRLogin extends StatefulWidget {
   @override

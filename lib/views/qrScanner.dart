@@ -4,12 +4,12 @@ import 'package:toast/toast.dart';
 
 import '../widgets/qrDrawer.dart';
 
-class QRHome extends StatefulWidget {
+class QRScanner extends StatefulWidget {
   @override
-  _QRHomeState createState() => _QRHomeState();
+  _QRScannerState createState() => _QRScannerState();
 }
 
-class _QRHomeState extends State<QRHome> {
+class _QRScannerState extends State<QRScanner> {
   bool paused = false;
   List<String> qrData = [];
 

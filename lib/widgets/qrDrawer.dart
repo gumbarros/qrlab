@@ -21,7 +21,7 @@ class QRDrawer extends StatelessWidget {
           Container(
             child: Text(
               "Dados Escaneados",
-              style: TextStyle(fontSize: 34.0, color: Colors.grey),
+              style: TextStyle(fontSize: 34.0),
             ),
           ),
           Divider(),
