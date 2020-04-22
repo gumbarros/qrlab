@@ -1,6 +1,6 @@
-# QR Code - 0.0.2 - Alpha
+# QR Lab - 0.1.0 - Alpha
 
-Aplicativo para realizar leitura de QR Codes para controle de estoque, nome do projeto a definir
+Aplicativo para realizar leitura e geração de QR Codes
 
 ## Desenvolvedores
 
