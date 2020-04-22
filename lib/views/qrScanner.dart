@@ -10,7 +10,7 @@ class QRScanner extends StatefulWidget {
 }
 
 class _QRScannerState extends State<QRScanner> {
-  bool paused = false;
+
   List<String> qrData = [];
 
   QRCaptureController _captureController = QRCaptureController();

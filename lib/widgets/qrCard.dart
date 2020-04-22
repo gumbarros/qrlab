@@ -18,26 +18,22 @@ class QRCard extends StatelessWidget {
         child: Container(
           width: MediaQuery.of(context).size.width / 1.3,
           height: MediaQuery.of(context).size.height / 4,
-          child: Row(
-            children: <Widget>[
-              Container(
-                  height: MediaQuery.of(context).size.height / 5,
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                          width: MediaQuery.of(context).size.width / 3,
-                          child:
-                              Image.asset("lib/assets/images/lab$asset.png")),
-                      Container(
-                        child: Text(title,
-                            style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                color: Theme.of(context).primaryColor)),
-                      ),
-                    ],
-                  ))
-            ],
-          ),
+          child: Container(
+              height: MediaQuery.of(context).size.height / 5,
+              child: Row(
+                children: <Widget>[
+                  Container(
+                      width: MediaQuery.of(context).size.width / 3,
+                      child:
+                          Image.asset("lib/assets/images/lab$asset.png")),
+                  Container(
+                    child: Text(title,
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            color: Theme.of(context).primaryColor)),
+                  ),
+                ],
+              )),
         ),
       ),
     );

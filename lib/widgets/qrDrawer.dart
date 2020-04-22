@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class QRDrawer extends StatelessWidget {
   final List<String> listData;
+
   QRDrawer({this.listData});
 
   @override
@@ -30,7 +31,9 @@ class QRDrawer extends StatelessWidget {
             bool url = data.contains("https://") ||
                     data.contains("http://") ||
                     data.contains("www.") ||
-                    data.contains(".com")
+                    data.contains(".com") ||
+                    data.contains(".net") ||
+                    data.contains(".org")
                 ? true
                 : false;
             return InkWell(
