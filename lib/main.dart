@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qrcode_alpha/views/homePage.dart';
-import 'views/qrHome.dart';
+import 'package:qrlab/views/qrLogin.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.lightBlue[800]
+    statusBarColor: Color.fromRGBO(153, 204, 51, 1.0),
   ));
   runApp(MyApp());
 }
@@ -14,11 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'QR Code Alpha',
+      title: 'QR Lab',
       theme: ThemeData(
-        primaryColor: Colors.lightGreen[800],
+        primaryColor: Color.fromRGBO(153, 204, 51, 1.0),
+        primarySwatch: Colors.lightGreen,
+        appBarTheme: AppBarTheme(
+            textTheme: TextTheme(
+                title: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold)),
+            iconTheme: IconThemeData(color: Colors.white)),
       ),
-      home: homePage(),
+      home: QRLogin(),
       debugShowCheckedModeBanner: false,
     );
   }

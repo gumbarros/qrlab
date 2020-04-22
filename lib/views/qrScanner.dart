@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:qrcode/qrcode.dart';
 import 'package:toast/toast.dart';
 
-
 import '../widgets/qrDrawer.dart';
 
 class QRHome extends StatefulWidget {
@@ -36,7 +35,7 @@ class _QRHomeState extends State<QRHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("QR Code scan"),
+        title: Text("QR Lab"),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         actions: <Widget>[
@@ -67,9 +66,7 @@ class _QRHomeState extends State<QRHome> {
                   decoration: BoxDecoration(
                       color: Colors.transparent,
                       border: Border.all(color: Colors.white)),
-                  child: SizedBox
-                      .shrink() 
-                  )),
+                  child: SizedBox.shrink())),
         ],
       ),
       drawer: QRDrawer(listData: qrData),

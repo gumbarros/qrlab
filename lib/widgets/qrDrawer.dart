@@ -21,9 +21,7 @@ class QRDrawer extends StatelessWidget {
           Container(
             child: Text(
               "Dados Escaneados",
-              style: TextStyle(
-                  fontSize: 34.0,
-                  color: Theme.of(context).textTheme.title.color),
+              style: TextStyle(fontSize: 34.0, color: Colors.grey),
             ),
           ),
           Divider(),
@@ -77,12 +75,11 @@ class QRDrawer extends StatelessWidget {
                                             data.contains("https")) &&
                                         data.contains("www.")) {
                                       data = "http://" + data;
-                                    }
-                                    else if (!(data.contains("http") ||
+                                    } else if (!(data.contains("http") ||
                                             data.contains("https")) &&
-                                        !data.contains("www.")){
-                                          data = "http://www." + data;
-                                        }
+                                        !data.contains("www.")) {
+                                      data = "http://www." + data;
+                                    }
                                     if (await canLaunch(data)) {
                                       await launch(data);
                                     } else {
