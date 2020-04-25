@@ -1,6 +1,6 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
+
 
 final String productTable = "productTable";
 final String idColumn = "idColumn";
