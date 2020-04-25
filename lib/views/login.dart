@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:qrlab/views/qrHome.dart';
-import 'qrLoginHelper.dart';
+import 'package:qrlab/views/home.dart';
+import 'package:qrlab/widgets/qrButton.dart';
+import 'loginHelper.dart';
 
 class QRLogin extends StatefulWidget {
   @override
@@ -64,21 +65,13 @@ class _QRLoginState extends State<QRLogin> {
                             builder: (context) => QRLoginHelper()));
                       }),
                   SizedBox(height: 10.0),
-                  ButtonTheme(
-                    minWidth: MediaQuery.of(context).size.width / 2,
-                    height: MediaQuery.of(context).size.width / 10,
-                    child: RaisedButton(
-                      color: Theme.of(context).primaryColor,
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => QRHome()));
-                      },
-                      textColor: Colors.white,
-                      child: Text(
-                        "Login",
-                      ),
-                    ),
-                  ),
+                  QRButton(
+                    "Login",
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => QRHome()));
+                    },
+                  )
                 ]),
           ),
         ));

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qrlab/widgets/qrButton.dart';
 
 class QRLoginHelper extends StatefulWidget {
   @override
@@ -39,20 +40,9 @@ class _QRLoginHelperState extends State<QRLoginHelper> {
                 ),
               ),
               SizedBox(height: 20),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width / 2,
-                height: MediaQuery.of(context).size.width / 10,
-                child: RaisedButton(
-                  color: Theme.of(context).primaryColor,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  textColor: Colors.white,
-                  child: Text(
-                    "Enviar",
-                  ),
-                ),
-              ),
+              QRButton("Enviar", onPressed: (){
+                Navigator.of(context).pop();
+              },)
             ],
           ),
         ),

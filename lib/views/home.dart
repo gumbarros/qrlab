@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qrlab/views/qrGenerator.dart';
-import 'package:qrlab/views/qrScanner.dart';
+import 'package:qrlab/views/generator.dart';
+import 'package:qrlab/views/scanner.dart';
 import 'package:qrlab/widgets/qrCard.dart';
 
 class QRHome extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qrlab/views/qrLogin.dart';
+import 'package:qrlab/views/login.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
