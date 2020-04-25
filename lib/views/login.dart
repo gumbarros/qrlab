@@ -3,16 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:qrlab/views/home.dart';
 import 'package:qrlab/widgets/qrButton.dart';
+import 'package:qrlab/widgets/qrTextFormField.dart';
 import 'loginHelper.dart';
 
-class QRLogin extends StatefulWidget {
-  @override
-  _QRLoginState createState() => _QRLoginState();
-}
+class Login extends StatelessWidget {
 
-class _QRLoginState extends State<QRLogin> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,22 +27,11 @@ class _QRLoginState extends State<QRLogin> {
                       child: Image.asset('lib/assets/images/lab1.png'),
                       width: MediaQuery.of(context).size.width / 1.3,
                       height: MediaQuery.of(context).size.height / 3),
-                  Container(
-                    width: MediaQuery.of(context).size.width / 1.3,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          labelText: "Usuário", border: OutlineInputBorder()),
-                    ),
-                  ),
+                  
                   SizedBox(height: 20),
-                  Container(
-                    width: MediaQuery.of(context).size.width / 1.3,
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          labelText: "Senha", border: OutlineInputBorder()),
-                    ),
-                  ),
+                  QRTextFormField(label: "Usuário"),
+                  SizedBox(height: 20),
+                  QRTextFormField(label: "Senha", isPassword: true),
                   GestureDetector(
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.3,
@@ -62,14 +46,14 @@ class _QRLoginState extends State<QRLogin> {
                       ),
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => QRLoginHelper()));
+                            builder: (context) => LoginHelper()));
                       }),
                   SizedBox(height: 10.0),
                   QRButton(
                     "Login",
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => QRHome()));
+                          MaterialPageRoute(builder: (context) => Home()));
                     },
                   )
                 ]),

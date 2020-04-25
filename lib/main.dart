@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color.fromRGBO(153, 204, 51, 1.0),
         primarySwatch: Colors.lightGreen,
         appBarTheme: AppBarTheme(
+            brightness: Brightness.dark,
             textTheme: TextTheme(
                 title: TextStyle(
                     color: Colors.white,
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold)),
             iconTheme: IconThemeData(color: Colors.white)),
       ),
-      home: QRLogin(),
+      home: Login(),
       debugShowCheckedModeBanner: false,
     );
   }

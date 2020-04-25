@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qrlab/widgets/qrButton.dart';
+import 'package:qrlab/widgets/qrTextFormField.dart';
 
-class QRLoginHelper extends StatefulWidget {
-  @override
-  _QRLoginHelperState createState() => _QRLoginHelperState();
-}
+class LoginHelper extends StatelessWidget {
 
-class _QRLoginHelperState extends State<QRLoginHelper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +29,7 @@ class _QRLoginHelperState extends State<QRLoginHelper> {
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey, fontSize: 17))),
               SizedBox(height: 20),
-              Container(
-                width: MediaQuery.of(context).size.width / 1.3,
-                child: TextField(
-                  decoration: InputDecoration(
-                      labelText: "Email", border: OutlineInputBorder()),
-                ),
-              ),
+              QRTextFormField(label: "Email"),
               SizedBox(height: 20),
               QRButton("Enviar", onPressed: (){
                 Navigator.of(context).pop();

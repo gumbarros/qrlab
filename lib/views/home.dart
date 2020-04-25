@@ -3,7 +3,7 @@ import 'package:qrlab/views/generator.dart';
 import 'package:qrlab/views/scanner.dart';
 import 'package:qrlab/widgets/qrCard.dart';
 
-class QRHome extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,10 +17,10 @@ class QRHome extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     QRCard(title: "Gerar QR Codes", asset: 2, onPressed: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>QRGenerator()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Generator()));
                     }),
                     QRCard(title: "   Ler QR Codes", asset: 3, onPressed: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>QRScanner()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Scanner()));
                     }),
                   ]))),
     );
