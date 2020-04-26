@@ -22,7 +22,7 @@ class Result extends StatelessWidget {
         ByteData byteData =
             await image.toByteData(format: ui.ImageByteFormat.png);
         var pngBytes = byteData.buffer.asUint8List();
-        await Share.file('Compartilhar QR Code', 'qrcode.png', pngBytes.buffer.asUint8List(), "image/png");
+        await Share.file('Share QR Code', 'qrcode.png', pngBytes.buffer.asUint8List(), "image/png");
       } catch (e) {
         print(e);
       }
@@ -50,7 +50,7 @@ class Result extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                QRButton("Compartilhar", onPressed: () {
+                QRButton("Share", onPressed: () {
                   _shareQRCode();
                 })
               ],

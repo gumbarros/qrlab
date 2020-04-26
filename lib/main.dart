@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qrlab/views/login.dart';
+import 'package:qrlab/views/home.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold)),
             iconTheme: IconThemeData(color: Colors.white)),
       ),
-      home: Login(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }

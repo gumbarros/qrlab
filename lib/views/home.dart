@@ -16,10 +16,10 @@ class Home extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    QRCard(title: "Gerar QR Codes", asset: 2, onPressed: (){
+                    QRCard(title: "Generate QR Codes", asset: 2, onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Generator()));
                     }),
-                    QRCard(title: "Ler QR Codes", asset: 3, onPressed: (){
+                    QRCard(title: "Read QR Codes", asset: 3, onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Scanner()));
                     }),
                   ]))),

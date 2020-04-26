@@ -21,7 +21,7 @@ class QRDrawer extends StatelessWidget {
           ),
           Container(
             child: Text(
-              "Dados Escaneados",
+              "Scanned Data",
               style: TextStyle(fontSize: 34.0),
             ),
           ),
@@ -40,7 +40,7 @@ class QRDrawer extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(5)),
               onLongPress: () {
                 Clipboard.setData(ClipboardData(text: data));
-                Toast.show("Copiado para a área de tranferência.", context,
+                Toast.show("Sent to clipboard", context,
                     duration: 1, gravity: Toast.BOTTOM);
               },
               child: Card(
@@ -64,7 +64,7 @@ class QRDrawer extends StatelessWidget {
                             color: !url ? Colors.black87 : Colors.white,
                             onPressed: () {
                               Clipboard.setData(ClipboardData(text: data));
-                              Toast.show("Copiado para a área de tranferência.",
+                              Toast.show("Sent to clipboard",
                                   context,
                                   duration: 1, gravity: Toast.BOTTOM);
                             },
@@ -86,7 +86,7 @@ class QRDrawer extends StatelessWidget {
                                     if (await canLaunch(data)) {
                                       await launch(data);
                                     } else {
-                                      Toast.show("Não é possível acessar a url",
+                                      Toast.show("Error 404",
                                           context,
                                           duration: 3,
                                           backgroundColor: Colors.red,

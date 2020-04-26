@@ -18,7 +18,7 @@ class _ScannerState extends State<Scanner> {
   @override
   void initState() {
     _captureController.onCapture((data) {
-      Toast.show("Dado gravado com sucesso!", context,
+      Toast.show("QR Code successfully scanned!", context,
           duration: 3, gravity: Toast.BOTTOM, backgroundColor: Colors.green);
       if (!qrData.contains(data)) {
         setState(() {

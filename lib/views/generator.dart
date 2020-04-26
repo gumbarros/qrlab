@@ -24,13 +24,13 @@ class Generator extends StatelessWidget {
             Container(
                   width: MediaQuery.of(context).size.width / 1.3,
                   child: Text(
-                      "Digite o texto que será armazenado no QR Code",
+                      "Insert the QR Code text",
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey, fontSize: 17))),
             SizedBox(height: 20),
             QRTextFormField(controller: dataController),
             SizedBox(height: 20),
-            QRButton("Gerar", onPressed: (){
+            QRButton("Generate", onPressed: (){
               Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Result(data: dataController.text)));
             },)
           ],
