@@ -6,7 +6,9 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("app_title".tr,style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
+      appBar: AppBar(title: Text("app_title".tr,style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false, actions: [IconButton(icon: Icon(Icons.settings), onPressed: (){
+        Get.toNamed('/settings');
+      },)],),
       body: SingleChildScrollView(
           child: Container(
               width: MediaQuery.of(context).size.width,

@@ -27,7 +27,7 @@ class ResultView extends StatelessWidget {
     }
 
     return Scaffold(
-        appBar: AppBar(title: Text("app_title".tr,style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
+        appBar: AppBar(title: Text("app_title".tr,style: TextStyle(color: Colors.white),), centerTitle: true),
         body: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height - 56,
