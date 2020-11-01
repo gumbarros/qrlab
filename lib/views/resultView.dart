@@ -20,14 +20,14 @@ class ResultView extends StatelessWidget {
         ByteData byteData =
             await image.toByteData(format: ui.ImageByteFormat.png);
         var pngBytes = byteData.buffer.asUint8List();
-        await Share.file('Share QR Code', 'qrcode.png', pngBytes.buffer.asUint8List(), "image/png");
+        await Share.file("share_qr".tr, 'qrcode.png', pngBytes.buffer.asUint8List(), "image/png");
       } catch (e) {
         print(e);
       }
     }
 
     return Scaffold(
-        appBar: AppBar(title: Text("QR Lab",style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
+        appBar: AppBar(title: Text("app_title".tr,style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
         body: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height - 56,
@@ -45,7 +45,7 @@ class ResultView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                QRButton("Share", onPressed: () {
+                QRButton("share".tr, onPressed: () {
                   _shareQRCode();
                 })
               ],

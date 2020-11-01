@@ -3,15 +3,18 @@ import 'package:get/get.dart';
 import 'package:qrlab/widgets/qrButton.dart';
 import 'package:qrlab/widgets/qrTextFormField.dart';
 
-
-
 class GeneratorView extends StatelessWidget {
-
   final TextEditingController dataController = TextEditingController();
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("QR Lab",style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
+      appBar: AppBar(
+          title: Text(
+            "app_title".tr,
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          automaticallyImplyLeading: false),
       body: SingleChildScrollView(
           child: Container(
         width: MediaQuery.of(context).size.width,
@@ -22,17 +25,19 @@ class GeneratorView extends StatelessWidget {
           children: <Widget>[
             Icon(Icons.code, size: 100, color: Colors.grey),
             Container(
-                  width: MediaQuery.of(context).size.width / 1.3,
-                  child: Text(
-                      "Insert the QR Code text",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.grey, fontSize: 17))),
+                width: MediaQuery.of(context).size.width / 1.3,
+                child: Text("insert_qr_text".tr,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.grey, fontSize: 17))),
             SizedBox(height: 20),
             QRTextFormField(controller: dataController),
             SizedBox(height: 20),
-            QRButton("Generate", onPressed: (){
-              Get.toNamed('/result',arguments: [dataController.text]);
-            },)
+            QRButton(
+              "generate".tr,
+              onPressed: () {
+                Get.toNamed('/result', arguments: [dataController.text]);
+              },
+            )
           ],
         ),
       )),

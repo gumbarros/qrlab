@@ -1,6 +1,7 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:toast/toast.dart';
+import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class QRDrawer extends StatelessWidget {
@@ -21,7 +22,7 @@ class QRDrawer extends StatelessWidget {
           ),
           Container(
             child: Text(
-              "Scanned Data",
+              "scanned_data".tr,
               style: TextStyle(fontSize: 34.0),
             ),
           ),
@@ -40,7 +41,7 @@ class QRDrawer extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(5)),
               onLongPress: () {
                 Clipboard.setData(ClipboardData(text: data));
-                Toast.show("Sent to clipboard", context,
+                Toast.show("sent_clipboard".tr, context,
                     duration: 1, gravity: Toast.BOTTOM);
               },
               child: Card(
@@ -64,7 +65,7 @@ class QRDrawer extends StatelessWidget {
                             color: !url ? Colors.black87 : Colors.white,
                             onPressed: () {
                               Clipboard.setData(ClipboardData(text: data));
-                              Toast.show("Sent to clipboard",
+                              Toast.show("sent_clipboard".tr,
                                   context,
                                   duration: 1, gravity: Toast.BOTTOM);
                             },
@@ -86,7 +87,7 @@ class QRDrawer extends StatelessWidget {
                                     if (await canLaunch(data)) {
                                       await launch(data);
                                     } else {
-                                      Toast.show("Error 404",
+                                      Toast.show("404".tr,
                                           context,
                                           duration: 3,
                                           backgroundColor: Colors.red,

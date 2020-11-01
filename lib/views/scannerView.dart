@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qrcode/qrcode.dart';
 import 'package:toast/toast.dart';
-
+import 'package:get/get.dart';
 import '../widgets/qrDrawer.dart';
 
 class ScannerView extends StatefulWidget {
@@ -10,7 +10,6 @@ class ScannerView extends StatefulWidget {
 }
 
 class _ScannerViewState extends State<ScannerView> {
-
   List<String> qrData = [];
 
   QRCaptureController _captureController = QRCaptureController();
@@ -18,7 +17,7 @@ class _ScannerViewState extends State<ScannerView> {
   @override
   void initState() {
     _captureController.onCapture((data) {
-      Toast.show("QR Code successfully scanned!", context,
+      Toast.show("qr_success".tr, context,
           duration: 3, gravity: Toast.BOTTOM, backgroundColor: Colors.green);
       if (!qrData.contains(data)) {
         setState(() {
@@ -35,7 +34,10 @@ class _ScannerViewState extends State<ScannerView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-title: Text("QR Lab",style: TextStyle(color: Colors.white),),
+        title: Text(
+          "app_title".tr,
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         actions: <Widget>[
