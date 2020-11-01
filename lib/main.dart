@@ -25,7 +25,7 @@ void main() async{
       locale: _getLocale(),
       getPages: Routes.routes(),
       translations: QRTranslations(),
-      title: 'QR Lab',
+      title: 'app_title'.tr,
       theme: QRTheme.theme,
       initialRoute: '/home',
       debugShowCheckedModeBanner: false,
@@ -41,6 +41,7 @@ Locale _getLocale(){
   if(langCode.isNull){
     return new Locale('pt');
   }
+
   else{
     return new Locale(langCode);
   }

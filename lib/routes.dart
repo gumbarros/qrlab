@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:qrlab/views/aboutView.dart';
 import 'package:qrlab/views/resultView.dart';
 import 'package:qrlab/views/scannerView.dart';
 import 'package:qrlab/views/settingsView.dart';
@@ -12,6 +13,7 @@ class Routes {
       GetPage(name: '/generator', page: () => GeneratorView()),
       GetPage(name: '/result', page: () => ResultView(),),
       GetPage(name: '/scanner', page: () => ScannerView(),),
+      GetPage(name: '/about',page: ()=>AboutView()),
       GetPage(name: '/settings', page: () => SettingsView(),),
     ];
   }

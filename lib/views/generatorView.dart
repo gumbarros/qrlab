@@ -13,8 +13,7 @@ class GeneratorView extends StatelessWidget {
             "app_title".tr,
             style: TextStyle(color: Colors.white),
           ),
-          centerTitle: true,
-          automaticallyImplyLeading: false),
+          centerTitle: true),
       body: SingleChildScrollView(
           child: Container(
         width: MediaQuery.of(context).size.width,

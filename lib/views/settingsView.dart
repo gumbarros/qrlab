@@ -40,7 +40,7 @@ class SettingsView extends StatelessWidget {
                             child: QRMenuCard(
                               text: "about".tr,
                               onTap: () async {
-
+                                Get.toNamed('/about');
                               },
                               icon: Icons.assignment_ind,
                             )),
