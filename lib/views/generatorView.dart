@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:qrlab/views/result.dart';
+import 'package:get/get.dart';
 import 'package:qrlab/widgets/qrButton.dart';
 import 'package:qrlab/widgets/qrTextFormField.dart';
 
 
 
-class Generator extends StatelessWidget {
+class GeneratorView extends StatelessWidget {
 
   final TextEditingController dataController = TextEditingController();
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("QR Lab"), centerTitle: true),
+      appBar: AppBar(title: Text("QR Lab",style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
       body: SingleChildScrollView(
           child: Container(
         width: MediaQuery.of(context).size.width,
@@ -31,7 +31,7 @@ class Generator extends StatelessWidget {
             QRTextFormField(controller: dataController),
             SizedBox(height: 20),
             QRButton("Generate", onPressed: (){
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Result(data: dataController.text)));
+              Get.toNamed('/result',arguments: [dataController.text]);
             },)
           ],
         ),

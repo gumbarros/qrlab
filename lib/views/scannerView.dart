@@ -4,12 +4,12 @@ import 'package:toast/toast.dart';
 
 import '../widgets/qrDrawer.dart';
 
-class Scanner extends StatefulWidget {
+class ScannerView extends StatefulWidget {
   @override
-  _ScannerState createState() => _ScannerState();
+  _ScannerViewState createState() => _ScannerViewState();
 }
 
-class _ScannerState extends State<Scanner> {
+class _ScannerViewState extends State<ScannerView> {
 
   List<String> qrData = [];
 
@@ -35,7 +35,7 @@ class _ScannerState extends State<Scanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("QR Lab"),
+title: Text("QR Lab",style: TextStyle(color: Colors.white),),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         actions: <Widget>[

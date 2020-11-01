@@ -2,14 +2,12 @@ import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qrlab/widgets/qrButton.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
 
-class Result extends StatelessWidget {
-  final String data;
-  Result({@required this.data});
-
+class ResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey _globalKey = new GlobalKey();
@@ -29,10 +27,7 @@ class Result extends StatelessWidget {
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text("QR Lab"),
-          centerTitle: true,
-        ),
+        appBar: AppBar(title: Text("QR Lab",style: TextStyle(color: Colors.white),), centerTitle: true, automaticallyImplyLeading: false),
         body: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height - 56,
@@ -44,7 +39,7 @@ class Result extends StatelessWidget {
                   key: _globalKey,
                   child: QrImage(
                     backgroundColor: Colors.white,
-                    data: data,
+                    data: Get.arguments[0],
                     version: QrVersions.auto,
                     size: 200.0,
                   ),
